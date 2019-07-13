@@ -22,14 +22,16 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-@client.event
+# Skipping this broken roll command for now
+'''@client.event
 async def on_roll(roll):
     if roll.author == client.user:
         return
     if roll.content.startswith('!roll'):
         possible_numbers = ["1","2","3","4","5","6","7","8","9","10","11","12"]
-        msg = 'You have rolled a' + random.choice(possible_numbers) + {roll.author.mention}.format(roll)
-        await client.send_message(roll.channel, msg)
+        msg = "You have rolled a" + random.choice(possible_numbers) + {roll.author.mention}.format(roll)
+        await client.send_message(roll.channel, msg)'''
+
 @client.event
 async def on_ready():
     print('Logged in as')
