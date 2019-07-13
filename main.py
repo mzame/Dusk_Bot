@@ -8,9 +8,23 @@ from discord import Game
 from discord.ext.commands import Bot
 
 BOT_PREFIX = ("!")
-TOKEN = 'NTk5Mzk0NzI0NTE1ODA3MjQz.XSkl3A.PjG3cdmW_iF3k23FPe5-0qWtfuQ'
+TOKEN = ''
 
 client = discord.Client()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @client.event
 async def on_message(message):
@@ -38,6 +52,4 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    
-
 client.run(TOKEN)
